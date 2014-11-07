@@ -9,7 +9,8 @@ In this demo, I recreated the project with recent version of Spray, but with ori
 
 The spray code is mostly copied from Spray project's sample code. I changed the code to make the SSE work. 
 
-Here are some learned from this example: 
+Lessens and Tips
+=================
 
 First, I am using Jetty as the HTTP server /Servlet contiainer. I choose Jetty ( similar with Tomcat) instead of SprayCan, as many applications are still on Tomcat or Jetty, I wants to demo that functionality can be easily applied with spray. This allows mixed usage of Java and Scala. 
 
