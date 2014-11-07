@@ -20,7 +20,11 @@ With Servelet container, the spray routing examples code in the spray project ne
 
 * Integration with Jetty
 
+ 
+
 ```
+   web.xml
+
     <display-name>sse</display-name>
 
     <listener>
@@ -38,6 +42,28 @@ With Servelet container, the spray routing examples code in the spray project ne
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 ```
+
+Here we simply add spray provided listner to the web.xml and redirect all the traffic to spray with servlet-mapping. Note that not "ALL" http traffic will to spray, this only applies to the traffic within this servlet context. 
+
+The default servlet context will be defined by your .war file name. We will name our applicaton war file as sse.war, so our application context will be "sse". 
+
+all traffic in /sse/* will be go to the spray servelet. 
+
+* deploy the war file
+
+To deploy the application, simply copy the sse.war to the jetty/webapps/sse.war 
+
+* start application 
+
+```
+ java -jar start.jar jetty.port=8081
+ 
+```
+
+
+
+
+
 
 
 
