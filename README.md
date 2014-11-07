@@ -19,7 +19,8 @@ Next, I choose to use Spray Routing for the higher level abstraction.
 With Servelet container, the spray routing examples code in the spray project need to be modified. 
 
 * Integration with Jetty
-'''
+
+```
     <display-name>sse</display-name>
 
     <listener>
@@ -36,7 +37,7 @@ With Servelet container, the spray routing examples code in the spray project ne
         <servlet-name>SprayConnectorServlet</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
-'''
+```
 
 
 
