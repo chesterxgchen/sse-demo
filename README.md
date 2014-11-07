@@ -9,7 +9,7 @@ In this demo, I recreated the project with recent version of Spray, but with ori
 
 The spray code is mostly copied from Spray project's sample code. I changed the code to make the SSE work. 
 
-Demo description
+About the demo
 =================
 
 First, I am using Jetty as the HTTP server /Servlet contiainer. I choose Jetty ( similar with Tomcat) instead of SprayCan, as many applications are still on Tomcat or Jetty, I wants to demo that functionality can be easily applied with spray. This allows mixed usage of Java and Scala. 
@@ -18,7 +18,25 @@ Next, I choose to use Spray Routing for the higher level abstraction.
 
 With Servelet container, the spray routing examples code in the spray project need to be modified. 
 
+* Integration with Jetty
+'''
+    <display-name>sse</display-name>
 
+    <listener>
+        <listener-class>spray.servlet.Initializer</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>SprayConnectorServlet</servlet-name>
+        <servlet-class>spray.servlet.Servlet30ConnectorServlet</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SprayConnectorServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+'''
 
 
 
