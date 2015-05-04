@@ -68,7 +68,7 @@ cp sse-demo_2.10-0.1-SNAPSHOT.war jetty/webapps/sse.war
  We use Buils.scala file with xsbt-web-plugin 
  you can create a war file using package command
  ```
- ᚛ ~/projects/html5-sse
+ ᚛ ~/projects/sse-demo
 ᚛ |master #|$ sbt package
 Loading /usr/local/Cellar/sbt/0.13.1/bin/sbt-launch-lib.bash
 [info] Loading project definition from /Users/chester/projects/html5-sse/project
@@ -80,7 +80,7 @@ Loading /usr/local/Cellar/sbt/0.13.1/bin/sbt-launch-lib.bash
 [info] Packaging /Users/chester/projects/html5-sse/target/scala-2.10/sse-demo_2.10-0.1-SNAPSHOT.war ...
 [info] Done packaging.
 [success] Total time: 10 s, completed Nov 7, 2014 7:59:19 AM
-᚛ ~/projects/html5-sse
+᚛ ~/projects/sse-demo
 ᚛ |master #|$ 
 
  ```
