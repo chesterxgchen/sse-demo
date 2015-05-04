@@ -135,6 +135,7 @@ trait DemoService extends HttpService {
           def receive = {
             case Ok(0) =>
              log.info(" going to stop it " )
+              ctx.responder ! MessageChunk("data: " + 100 + "\n\n")
               ctx.responder ! MessageChunk("data: Finished.\n\n")
               ctx.responder ! ChunkedMessageEnd
               context.stop(self)
